@@ -27,6 +27,7 @@ fastify.get('/api', async (request, reply) => {
   const tasks = (await api.getTasks()).
     filter((task) => task.projectId === 2261610951).
     // filter((task) => !task.completed).
+    sort((a, b) => (a.order <= b.order) ? -1 : 1).
     sort((a, b) => (a.priority <= b.priority) ? 1 : -1);
 
   reply.send(tasks);
