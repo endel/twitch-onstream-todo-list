@@ -1,4 +1,4 @@
-# On-stream todo-list viewer
+# On-stream to-do/checklist viewer
 
 <img src="screenshot.png?raw=1" />
 
