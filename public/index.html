@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todoist on stream</title>
+
+  <style>
+    * { margin: 0; padding: 0; }
+    @font-face {
+      font-family: "typo_hoop";
+      src: url('Typo_Hoop_Regular.otf');
+    }
+    body {
+      font-family: "typo_hoop";
+    }
+    ul {
+      display: flex;
+      flex-direction: column-reverse;
+      color: #fff;
+      list-style: none;
+    }
+    ul li {
+      display: block;
+      padding: 0.5em;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    ul li:first-child {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+
+  <script>
+    function loadTasks() {
+      return new Promise((resolve, reject) => {
+        fetch('/api')
+          .then(response => response.json())
+          .then((json) => resolve(json))
+          .catch((err) => reject(err));
+      });
+    }
+
+    function buildTaskElement(tasks) {
+      console.log(tasks);
+      document.body.innerHTML = `<ul>${tasks.map((task, i) => {
+        if (i === 0) {
+          return `<li>🚀 ${task.content}</li>`;
+
+        } else {
+          return `<li>⏳ ${task.content}</li>`;
+
+        }
+      }).join("\n")}</ul>`;
+    }
+
+    async function reload() {
+      const tasks = await loadTasks();
+      buildTaskElement(tasks);
+    }
+    reload();
+
+    // setInterval(() => location.reload(), 5000);
+    setInterval(() => reload(), 5000);
+  </script>
+
+</head>
+<body>
+  Loading tasks ⏳
+</body>
+</html>
