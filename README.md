@@ -1,5 +1,7 @@
 # On-stream todo-list viewer
 
+<img src="screenshot.png?raw=1" />
+
 Requirements:
 
 - Git
