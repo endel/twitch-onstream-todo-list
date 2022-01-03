@@ -32,4 +32,4 @@ fastify.get('/api', async (request, reply) => {
   reply.send(tasks);
 });
 
-fastify.listen(8888);
+fastify.listen(process.env.PORT || 8888);
