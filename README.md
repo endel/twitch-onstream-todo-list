@@ -1,5 +1,11 @@
 # On-stream todo-list viewer
 
+Requirements:
+
+- Git
+- NodeJS
+- Todoist account and API Token
+
 How to use:
 
 - Clone this repo
