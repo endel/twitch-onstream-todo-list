@@ -8,26 +8,49 @@
 
   <style>
     * { margin: 0; padding: 0; }
+
     @font-face {
       font-family: "typo_hoop";
       src: url('Typo_Hoop_Regular.otf');
     }
+
     body {
       font-family: "typo_hoop";
+      font-size: 12px;
+      /* text-shadow: 0px 2px #000; */
+      color: #fff;
+      /* position: absolute;
+      bottom: 0; */
+      margin: 0.5em;
     }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 0.4em;
+      display: block;
+    }
+
     ul {
       display: flex;
-      flex-direction: column-reverse;
-      color: #fff;
+      width: 350px;
+      flex-direction: column;
       list-style: none;
     }
+
     ul li {
       display: block;
       padding: 0.5em;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 0.3em;
+      margin-bottom: 0.3em;
     }
+
     ul li:first-child {
-      background: rgba(0, 0, 0, 0.6);
+      background: #f5424d;
+    }
+
+    ul li.priority-4 {
+      background: rgba(0, 0, 0, 0.85);
     }
   </style>
 
@@ -42,16 +65,12 @@
     }
 
     function buildTaskElement(tasks) {
-      console.log(tasks);
-      document.body.innerHTML = `<ul>${tasks.map((task, i) => {
-        if (i === 0) {
-          return `<li>🚀 ${task.content}</li>`;
-
-        } else {
-          return `<li>⏳ ${task.content}</li>`;
-
-        }
-      }).join("\n")}</ul>`;
+      document.querySelector('.tasks').innerHTML = `<ul>
+        <li>☑️ To-do / Checklist</li>
+        ${(tasks.length === 0) ? `<li class="priority-4">🎉 NO TASKS 🎉</li>` : ""}
+        ${tasks.map((task, i) => {
+          return `<li class="priority-${task.priority}">${ (task.priority === 4) ? "👨‍💻" : "⏳" } ${ task.content }</li>`;
+        }).join("\n")}</ul>`;
     }
 
     async function reload() {
@@ -66,6 +85,6 @@
 
 </head>
 <body>
-  Loading tasks ⏳
+  <div class="tasks">Loading tasks ⏳</div>
 </body>
 </html>
