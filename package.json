@@ -1,14 +1,15 @@
 {
-  "name": "todo-onstream",
+  "private": true,
+  "name": "twitch-onstream-todo-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "A to-do/checklist viewer for OBS as a Browser Source",
   "main": "index.js",
   "scripts": {
     "start": "vercel dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Endel Dreyer",
+  "license": "MIT",
   "dependencies": {
     "@doist/todoist-api-typescript": "^1.5.0",
     "dotenv": "^10.0.0",
