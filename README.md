@@ -1,6 +1,6 @@
 # On-stream to-do/checklist viewer
 
-[![Deploy with Vercel](https://vercel.com/button)]([![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fendel%2Ftwitch-onstream-todo-list&env=TODOIST_TOKEN,TODOIST_PROJECT_ID))
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fendel%2Ftwitch-onstream-todo-list&env=TODOIST_TOKEN,TODOIST_PROJECT_ID)
 
 <img src="screenshot.png?raw=1" />
 
