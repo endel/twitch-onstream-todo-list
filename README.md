@@ -2,7 +2,7 @@
 
 <img src="screenshot.png?raw=1" />
 
-## Deploying to Vercel
+## Recommended: Deploying to Vercel
 
 Click here [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fendel%2Ftwitch-onstream-todo-list&env=TODOIST_TOKEN,TODOIST_PROJECT_ID)
 
@@ -22,7 +22,7 @@ After you have your full Todoist task list showing up on Vercel, you can access 
 
 ![](screenshot-projectid.png?raw=1)
 
-## Running locally
+## Alternative: Run it locally on your machine
 
 Requirements:
 
