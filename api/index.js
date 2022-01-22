@@ -5,7 +5,7 @@ import fastifyStatic from 'fastify-static';
 import path from 'path'
 import { TodoistApi } from '@doist/todoist-api-typescript'
 
-const api = new TodoistApi(process.env.TODOIST_TOKEN!);
+const api = new TodoistApi(process.env.TODOIST_TOKEN);
 const fastify = Fastify({ logger: true })
 
 fastify.register(fastifyStatic, {
