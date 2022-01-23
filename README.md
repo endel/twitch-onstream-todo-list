@@ -10,7 +10,7 @@ In the _"Configure Project"_ step you'll be asked for these Environment Variable
 
 ### `TODOIST_TOKEN`
 
-Open _"Settings"_ → _"Integrations"_, and scroll to the bottom, then copy the token to clipboard.
+Open _"Settings"_ → _"Integrations"_, and scroll to the bottom, then copy the API token to clipboard.
 
 ![](screenshot-settings.png?raw=1)
 
