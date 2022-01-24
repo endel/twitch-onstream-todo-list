@@ -2,6 +2,9 @@
 
 <img src="screenshot.png?raw=1" />
 
+- HTML: https://twitch-todo.vercel.app/
+- Raw data: https://twitch-todo.vercel.app/api
+
 ## Recommended: Deploying to Vercel
 
 Click here [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fendel%2Ftwitch-onstream-todo-list&env=TODOIST_TOKEN,TODOIST_PROJECT_ID)
@@ -21,6 +24,10 @@ You may filter your tasks per project. (If specified, only 1 `"projectId"` can b
 After you have your full Todoist task list showing up on Vercel, you can access the `/api` URL, and search for a `"projectId"` field in the tasks under the project you're interested in filtering, and use that value for the environment variable.
 
 ![](screenshot-projectid.png?raw=1)
+
+### (optional) `TODOIST_SECTION_ID`
+
+You may filter your tasks by their "sectionId", too. (If specified, only 1 `"sectionId"` can be used)
 
 ## Alternative: Run it locally on your machine
 
